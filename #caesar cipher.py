@@ -3,6 +3,8 @@ letters=['a','b','c','d','e','f','h','g','i','j','k','l','m','n','o','p','q','r'
 direction=int(input("type 0 for encode or 1 for decode\n"))
 text=input("type your message\n").lower()
 shift=int(input("type shift number\n"))
+if(shift>26):
+    shift%=26
 def caesar(plaintext,shiftnumber,direction):
     ciphertext=""
     for letter in plaintext:
